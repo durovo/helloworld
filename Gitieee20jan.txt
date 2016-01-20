@@ -1,0 +1,308 @@
+Date:   Wed Jan 20 11:59:47 2016 +0530
+
+    'Secondcommit along with the amend'
+
+commit c4fb885f8a8f2ff28809a70eaef2edc98f6b1783
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:50:23 2016 +0530
+
+    Firstcommit
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        textfile3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Downloads\Dhruv\Git Repo 1>git add textfile3.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   textfile3.txt
+
+
+D:\Downloads\Dhruv\Git Repo 1>git reset HEAD textfile3.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        textfile3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Downloads\Dhruv\Git Repo 1>git status -s
+?? textfile3.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git commit -a -m 'Thirdcommit'
+On branch master
+Untracked files:
+        textfile3.txt
+
+nothing added to commit but untracked files present
+
+D:\Downloads\Dhruv\Git Repo 1>git add textfile3.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git commit -m 'Thirdcommit'
+[master 5f1fd8b] 'Thirdcommit'
+ 1 file changed, 1 insertion(+)
+ create mode 100644 textfile3.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git log
+commit 5f1fd8bb9c5dd807c64226c38ad830a60f5c9ff0
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:21:20 2016 +0530
+
+    'Thirdcommit'
+
+commit 075fd5dcd3c2684d0aade72e8bfeffddd1df35c3
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:59:47 2016 +0530
+
+    'Secondcommit along with the amend'
+
+commit c4fb885f8a8f2ff28809a70eaef2edc98f6b1783
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:50:23 2016 +0530
+
+    Firstcommit
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch master
+nothing to commit, working directory clean
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        textfile4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Downloads\Dhruv\Git Repo 1>git add textfile4.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   textfile4.txt
+
+
+D:\Downloads\Dhruv\Git Repo 1>git commit --amend
+[master 88d7052] 'Thirdcommit along with the fourth file'
+ Date: Wed Jan 20 12:21:20 2016 +0530
+ 2 files changed, 2 insertions(+)
+ create mode 100644 textfile3.txt
+ create mode 100644 textfile4.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git log
+commit 88d705229b039a9dffaa9e7f79a004bfbe9bffcb
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:21:20 2016 +0530
+
+    'Thirdcommit along with the fourth file'
+
+commit 075fd5dcd3c2684d0aade72e8bfeffddd1df35c3
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:59:47 2016 +0530
+
+    'Secondcommit along with the amend'
+
+commit c4fb885f8a8f2ff28809a70eaef2edc98f6b1783
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:50:23 2016 +0530
+
+    Firstcommit
+
+D:\Downloads\Dhruv\Git Repo 1>git remote -v
+
+D:\Downloads\Dhruv\Git Repo 1>git remote add origin www.github.com
+
+D:\Downloads\Dhruv\Git Repo 1>git remote -v
+origin  www.github.com (fetch)
+origin  www.github.com (push)
+
+D:\Downloads\Dhruv\Git Repo 1>git push origin master
+fatal: 'www.github.com' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\Downloads\Dhruv\Git Repo 1>git branch testing
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch master
+nothing to commit, working directory clean
+
+D:\Downloads\Dhruv\Git Repo 1>git checkout testing
+Switched to branch 'testing'
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch testing
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        newbf.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Downloads\Dhruv\Git Repo 1>git add newbf.text
+fatal: pathspec 'newbf.text' did not match any files
+
+D:\Downloads\Dhruv\Git Repo 1>git add newbf.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git commit -m 'commitonbranch'
+[testing c7cc8c6] 'commitonbranch'
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newbf.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git log
+commit c7cc8c6932ff7b31dc6a0ee9a5c735d0c01c9ea6
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:35:54 2016 +0530
+
+    'commitonbranch'
+
+commit 88d705229b039a9dffaa9e7f79a004bfbe9bffcb
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:21:20 2016 +0530
+
+    'Thirdcommit along with the fourth file'
+
+commit 075fd5dcd3c2684d0aade72e8bfeffddd1df35c3
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:59:47 2016 +0530
+
+    'Secondcommit along with the amend'
+
+commit c4fb885f8a8f2ff28809a70eaef2edc98f6b1783
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:50:23 2016 +0530
+
+    Firstcommit
+
+D:\Downloads\Dhruv\Git Repo 1>git checkout master
+Switched to branch 'master'
+
+D:\Downloads\Dhruv\Git Repo 1>git log
+commit 88d705229b039a9dffaa9e7f79a004bfbe9bffcb
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:21:20 2016 +0530
+
+    'Thirdcommit along with the fourth file'
+
+commit 075fd5dcd3c2684d0aade72e8bfeffddd1df35c3
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:59:47 2016 +0530
+
+    'Secondcommit along with the amend'
+
+commit c4fb885f8a8f2ff28809a70eaef2edc98f6b1783
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:50:23 2016 +0530
+
+    Firstcommit
+
+D:\Downloads\Dhruv\Git Repo 1>git checkout testing
+Switched to branch 'testing'
+
+D:\Downloads\Dhruv\Git Repo 1>git log
+commit c7cc8c6932ff7b31dc6a0ee9a5c735d0c01c9ea6
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:35:54 2016 +0530
+
+    'commitonbranch'
+
+commit 88d705229b039a9dffaa9e7f79a004bfbe9bffcb
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:21:20 2016 +0530
+
+    'Thirdcommit along with the fourth file'
+
+commit 075fd5dcd3c2684d0aade72e8bfeffddd1df35c3
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:59:47 2016 +0530
+
+    'Secondcommit along with the amend'
+
+commit c4fb885f8a8f2ff28809a70eaef2edc98f6b1783
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:50:23 2016 +0530
+
+    Firstcommit
+
+D:\Downloads\Dhruv\Git Repo 1>git diff
+diff --git a/newbf.txt b/newbf.txt
+index e69de29..586a595 100644
+--- a/newbf.txt
++++ b/newbf.txt
+@@ -0,0 +1 @@
++ahuafkewkfjb
+\ No newline at end of file
+
+D:\Downloads\Dhruv\Git Repo 1>git status -s
+ M newbf.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git status
+On branch testing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   newbf.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\Downloads\Dhruv\Git Repo 1>git add newbf.txt
+
+D:\Downloads\Dhruv\Git Repo 1>git commit
+[testing b86bebb] Second branch comit
+ 1 file changed, 1 insertion(+)
+
+D:\Downloads\Dhruv\Git Repo 1>git log
+commit b86bebb435801124ffc459d3f111eeb43c3b0607
+commit b86bebb435801124ffc459d3f111eeb43c3b0607
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:37:30 2016 +0530
+
+    Second branch comit
+
+commit c7cc8c6932ff7b31dc6a0ee9a5c735d0c01c9ea6
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:35:54 2016 +0530
+
+    'commitonbranch'
+
+commit 88d705229b039a9dffaa9e7f79a004bfbe9bffcb
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 12:21:20 2016 +0530
+
+    'Thirdcommit along with the fourth file'
+
+commit 075fd5dcd3c2684d0aade72e8bfeffddd1df35c3
+Author: durovo <anondhruv@gmail.com>
+Date:   Wed Jan 20 11:59:47 2016 +0530
+
+    'Secondcommit along with the amend'
+
+
+D:\Downloads\Dhruv\Git Repo 1>
+D:\Downloads\Dhruv\Git Repo 1>
+
+webstorm - web dev
+pycharm - python
+intellij or eclipse for java
+
+C# :
+Visual Studio
+LINQPad
